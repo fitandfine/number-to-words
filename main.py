@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException, Query
-
+from logic import number_to_words
 
 app = FastAPI()
 
@@ -15,7 +15,7 @@ def convert(number: int = Query(..., description="The number you want to turn in
         raise HTTPException(status_code=400, detail="Please provide a positive integer.")
     
     # Using our logic from logic.py
-    words = f"You entered the number {number}. The conversion logic will be added here."  # Placeholder for actual conversion logic
+    words = number_to_words(number)
     
     return {
         "input": number,
