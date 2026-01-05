@@ -103,3 +103,14 @@ http://127.0.0.1:8000/docs
 - Zero chunks are skipped to avoid invalid phrases
 
 This mirrors how numbers are spoken in real English.
+
+
+## Continuous Integration (CI)
+
+This repository uses GitHub Actions to automatically:
+
+- Install dependencies
+
+- Run unit tests on every push or pull request
+
+This ensures code quality and prevents regressions.
