@@ -1,0 +1,5 @@
+n2w/
+./n2w
+pycache__/
+__pycache__/
+*.pyc
