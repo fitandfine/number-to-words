@@ -14,6 +14,9 @@ def convert(number: int = Query(..., description="The number you want to turn in
     if number < 0:
         raise HTTPException(status_code=400, detail="Please provide a positive integer.")
     
+    if number > 999_999_999_999_999:
+        raise HTTPException(status_code=400, detail="Number too large. Please provide a number up to 999,999,999,999,999.")
+    
     # Using our logic from logic.py
     words = number_to_words(number)
     
