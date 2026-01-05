@@ -15,9 +15,16 @@ def convert(number: int = Query(..., description="The number you want to turn in
         raise HTTPException(status_code=400, detail="Please provide a positive integer.")
     
     # Using our logic from logic.py
-    words = f"You have entered the number {number}. The conversion logic will be added here."  # Placeholder for actual conversion logic
+    words = f"You entered the number {number}. The conversion logic will be added here."  # Placeholder for actual conversion logic
     
     return {
         "input": number,
         "output": words
+    }
+@app.get("/about")
+def about():
+    return {
+        "name": "Number to Words API",
+        "version": "1.0",
+        "description": "A simple API to convert numbers into their English word representations. Works for positive integers, Upto 999,999,999,999,999.",
     }
