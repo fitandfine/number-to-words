@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException, Query
-from logic import number_to_words
+from .logic import number_to_words
 
 app = FastAPI()
 
