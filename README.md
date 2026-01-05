@@ -116,3 +116,59 @@ This repository uses GitHub Actions to automatically:
 - Run unit tests on every push or pull request
 
 This ensures code quality and prevents regressions.
+
+# Usage
+```bash
+GET /convert?number=565 # using query parameter
+GET /convert/565 # using path parameter
+```
+```bash
+# Example:
+http://127.0.0.1/convert?number=565
+http://127.0.0.1/convert/565
+```
+
+## Further Development
+
+This project is functional and well-tested, but there are several opportunities for enhancement to make it even more robust, scalable, and production-ready:
+
+1. **Containerization with Docker**
+   - Package the API and all dependencies in a Docker container.
+   - Ensures environment consistency across different machines and servers.
+   - Simplifies deployment to cloud platforms or production servers.
+
+2. **API Endpoint Testing**
+   - Extend automated testing to include all endpoints using `FastAPI TestClient`.
+   - Validate input, output, and error handling programmatically.
+   - Integrate with GitHub Actions CI/CD for automatic testing on every push or pull request.
+
+3. **Path Parameter Support**
+   - Modify `/convert` endpoint to accept numbers as path parameters (e.g., `/convert/12345`) for a more RESTful API design.
+
+4. **Support for Negative Numbers and Decimals**
+   - Extend conversion logic to handle negative integers and fractional numbers.
+   - Could add options like “currency” or “ordinal numbers” (e.g., `1st`, `2nd`).
+
+5. **Localization / Multi-Language Support**
+   - Add support for converting numbers into words in other languages.
+   - Could be implemented with a language parameter (`/convert?number=123&lang=fr`).
+
+6. **Dockerized Testing and CI/CD**
+   - Run all unit and API tests inside a container to ensure the container works correctly.
+   - Automate the CI/CD pipeline to build, test, and deploy Docker images.
+
+7. **Error Logging & Monitoring**
+   - Add proper error logging using tools like **Sentry** or **logging module**.
+   - Monitor API usage and detect potential issues in production.
+
+8. **Deployment**
+   - Deploy the API to cloud platforms such as AWS, GCP, or Azure.
+   - Add HTTPS support and domain routing for production readiness.
+
+9. **Rate Limiting / Security**
+   - Implement request throttling to prevent abuse.
+   - Add API key authentication or JWT tokens for secure usage.
+
+---
+## Thank You for your time in reading this far!
+Anup
