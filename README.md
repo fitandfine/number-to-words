@@ -1,4 +1,6 @@
 # Number to Words API (FastAPI)
+![Tests](https://github.com/fitandfine/number-to-words/actions/workflows/tests.yml/badge.svg)
+
 
 A beginner-friendly yet production-structured Python project that converts numbers into their English word representation using a REST API built with **FastAPI**.
 
